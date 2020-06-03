@@ -24,7 +24,9 @@
     --disable-oss-output \
     --disable-oss-wrapper \
     --disable-tcpwrap \
+    --disable-manpages \
     --disable-lirc
 
+# We disable the manpages, as they require a perl module.
 make
 make DESTDIR="$1" install
